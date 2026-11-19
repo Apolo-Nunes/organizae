@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f6f5ef">
+  <title>Organizaê — suas tarefas em ordem</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="index.html" aria-label="Organizaê, página inicial">
+      <span class="marca-simbolo" aria-hidden="true">o.</span>
+      <span>organiza<span class="marca-destaque">ê</span></span>
+    </a>
+    <p class="topo-legenda">um passo de cada vez 🌱</p>
+  </header>
+  <main class="pagina">
+    <section class="boas-vindas" aria-labelledby="titulo-principal">
+      <div>
+        <p class="sobretitulo">SEU ESPAÇO, SEU RITMO</p>
+        <h1 id="titulo-principal">Tire as ideias da cabeça<br><span>e coloque no papel.</span></h1>
+        <p class="introducao">Organize o que precisa ser feito e celebre cada pequena conquista.</p>
+      </div>
+      <div class="ilustracao" aria-hidden="true"><span>✳</span><span>✓</span></div>
+    </section>
+    <section class="resumo" aria-label="Resumo das tarefas">
+      <article class="cartao-resumo cartao-total">
+        <span class="resumo-icone" aria-hidden="true">✦</span>
+        <div><p class="resumo-rotulo">Todas as tarefas</p><p class="resumo-numero" id="contador-total">0</p></div>
+      </article>
+      <article class="cartao-resumo cartao-pendentes">
+        <span class="resumo-icone" aria-hidden="true">◷</span>
+        <div><p class="resumo-rotulo">Em andamento</p><p class="resumo-numero" id="contador-pendentes">0</p></div>
+      </article>
+      <article class="cartao-resumo cartao-concluidas">
+        <span class="resumo-icone" aria-hidden="true">✓</span>
+        <div><p class="resumo-rotulo">Concluídas</p><p class="resumo-numero" id="contador-concluidas">0</p></div>
+      </article>
+    </section>
+    <section class="painel" aria-labelledby="titulo-tarefas">
+      <div class="painel-cabecalho">
+        <div>
+          <p class="sobretitulo">VAMOS NESSA?</p>
+          <h2 id="titulo-tarefas">Minhas tarefas <span class="ponto-verde" aria-hidden="true">●</span></h2>
+        </div>
+        <p class="dica-painel">Pequenos passos também levam longe.</p>
+      </div>
+      <form class="formulario" id="form-tarefa">
+        <div class="campo-titulo">
+          <label class="rotulo-oculto" for="titulo-tarefa">O que você precisa fazer?</label>
+          <input id="titulo-tarefa" name="titulo" type="text" maxlength="100" placeholder="O que você precisa fazer?" required>
+        </div>
+        <div class="campo-nota">
+          <label class="rotulo-oculto" for="nota-tarefa">Detalhe opcional</label>
+          <input id="nota-tarefa" name="nota" type="text" maxlength="180" placeholder="Adicione um detalhe (opcional)">
+        </div>
+        <div class="acoes-formulario">
+          <button class="botao-principal" id="botao-salvar" type="submit"><span aria-hidden="true">＋</span> Adicionar tarefa</button>
+          <button class="botao-cancelar oculto" id="botao-cancelar" type="button">Cancelar edição</button>
+        </div>
+        <p class="mensagem" id="mensagem" role="status" aria-live="polite"></p>
+      </form>
+      <div class="lista-cabecalho">
+        <h3>O que está na sua lista</h3>
+        <div class="filtros" aria-label="Filtrar tarefas">
+          <button class="filtro ativo" type="button" data-filtro="todas" aria-pressed="true">Todas</button>
+          <button class="filtro" type="button" data-filtro="pendentes" aria-pressed="false">Em andamento</button>
+          <button class="filtro" type="button" data-filtro="concluidas" aria-pressed="false">Concluídas</button>
+        </div>
+      </div>
+      <ul class="lista-tarefas" id="lista-tarefas" aria-live="polite"></ul>
+      <div class="estado-vazio" id="estado-vazio">
+        <span class="vazio-icone" aria-hidden="true">✎</span>
+        <h3 id="vazio-titulo">Sua lista começa com uma ideia.</h3>
+        <p id="vazio-texto">Adicione uma tarefa ali em cima e organize seu dia.</p>
+      </div>
+      <p class="rodape-painel"><span aria-hidden="true">♡</span> Feito no seu tempo. Um passo de cada vez.</p>
+    </section>
+    <footer class="rodape-pagina">ORGANIZAÊ <span>·</span> UM LUGAR PARA CADA IDEIA</footer>
+  </main>
+</body>
+</html>
