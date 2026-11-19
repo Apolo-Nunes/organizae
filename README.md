@@ -29,3 +29,7 @@ Aplicação de lista de tarefas feita para o trabalho prático individual da dis
 ## Decisões de implementação
 
 As tarefas são representadas como objetos dentro de um array. As funções atualizam essa lista e redesenham os itens no DOM. O formulário é usado tanto para cadastrar quanto para editar; durante a edição, os campos recebem os valores atuais e o botão de cancelar encerra essa ação. Os filtros mostram todas as tarefas, apenas as que ainda estão em andamento ou apenas as concluídas. Os dados são convertidos para texto JSON antes de serem guardados no `localStorage` e convertidos de volta quando a página é aberta.
+
+## Link para a aplicação publicada no GitHub Pages.
+
+https://apolo-nunes.github.io/organizae/
